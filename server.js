@@ -5,14 +5,14 @@
  * name: Jozias de Jonge
  * email: dejongej@oregonstate.edu
  */
-let http = require("http");
-let fs = require('fs');
+var http = require("http");
+var fs = require('fs');
 
 
-let htmlContent = fs.readFileSync('public/index.html');
-let cssContent = fs.readFileSync('public/style.css');
-let jsContent = fs.readFileSync('public/index.js');
-let fourContent = fs.readFileSync('public/404.html');
+var htmlContent = fs.readFileSync('public/index.html');
+var cssContent = fs.readFileSync('public/style.css');
+var jsContent = fs.readFileSync('public/index.js');
+var fourContent = fs.readFileSync('public/404.html');
 
 console.log("PORT:", process.env.PORT);
 
@@ -54,7 +54,7 @@ function requestHandler(req, res) {
     res.end();
 }
 
-let server = http.createServer(requestHandler);
+var server = http.createServer(requestHandler);
 
 server.listen(3000, function (err) {
     console.log("Server running on port 3000");
